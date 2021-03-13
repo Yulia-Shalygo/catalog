@@ -1,0 +1,29 @@
+<div class="section">
+
+    <button class="btn" routerLink="create-product">Добавить</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Продукт</th>
+                <th>Ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+                <th>Артикул</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td (click)="deleteProduct(product)" class="delete">x</td>
+                <td class="product">{{ product.name }}</td>
+                <td>{{ product.calories }}</td>
+                <td>{{ product.carbs }}</td>
+                <td>{{ product.fats }}</td>
+                <td>{{ product.proteins }}</td>
+                <td>{{ product.article }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

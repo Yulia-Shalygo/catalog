@@ -1,0 +1,44 @@
+<div class="section">
+    <div class="container">
+        <div class="create">
+            <form class="form-group" [formGroup]="catalogForm"> 
+            
+                <div class="form-group">
+                    <input [(ngModel)]="product.name" #name formControlName="name" type="text" class="form-control" placeholder="Название">
+                    <span *ngIf="catalogForm.get('name').invalid && catalogForm.get('name').touched" class="error-text">Это обязательное поле.</span>
+                </div>
+            
+                <div class="form-group">
+                    <input [(ngModel)]="product.calories" #calories formControlName="calories" type="number" class="form-control" placeholder="Калорийность">
+                    <span *ngIf="catalogForm.get('calories').invalid && catalogForm.get('calories').touched" class="error-text">Это обязательное поле.</span>
+                </div>
+            
+                <div class="form-group">
+                    <input [(ngModel)]="product.carbs" #carbs formControlName="carbs" type="number" class="form-control" placeholder="Белки">
+                    <span *ngIf="catalogForm.get('carbs').invalid && catalogForm.get('carbs').touched" class="error-text">Это обязательное поле.</span>
+                </div>
+            
+                <div class="form-group">
+                    <input [(ngModel)]="product.fats" #fats formControlName="fats" type="number" class="form-control" placeholder="Жиры">
+                    <span *ngIf="catalogForm.get('fats').invalid && catalogForm.get('fats').touched" class="error-text">Это обязательное поле.</span>
+                </div>
+            
+                <div class="form-group">
+                    <input [(ngModel)]="product.proteins" #proteins formControlName="proteins" type="number" class="form-control" placeholder="Углеводы">
+                    <span *ngIf="catalogForm.get('proteins').invalid && catalogForm.get('proteins').touched" class="error-text">Это обязательное поле.</span>
+                </div>
+            
+                <div class="form-group">
+                    <input [(ngModel)]="product.article" #article formControlName="article" type="text" class="form-control" placeholder="Артикул">
+                    <span *ngIf="catalogForm.get('article').invalid && catalogForm.get('article').touched" class="error-text">Это обязательное поле.</span>
+                </div>
+            
+                <div class="btns">
+                    <input routerLink="/" class="btn btn-default btn-back" value="Назад">
+                    <input (click)="createProduct()" type="submit" class="btn btn-default" [disabled]="catalogForm.invalid || catalogForm.disabled" value="Сохранить" />
+                </div>
+            
+            </form>
+        </div>
+    </div>
+</div>
