@@ -12,6 +12,7 @@ import { CatalogComponent } from './catalog/catalog/catalog.component';
 
 import firebase from 'firebase';
 import { CreateProductComponent } from './catalog/create-product/create-product.component';
+import { CatalogHeaderComponent } from './catalog/catalog-header/catalog-header.component';
 
 firebase.initializeApp(environment.firebase);
 
@@ -20,6 +21,7 @@ firebase.initializeApp(environment.firebase);
     AppComponent,
     CatalogComponent,
     CreateProductComponent,
+    CatalogHeaderComponent
   ],
   imports: [
     BrowserModule,

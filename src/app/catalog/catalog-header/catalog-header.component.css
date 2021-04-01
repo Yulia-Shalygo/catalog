@@ -1,7 +1,3 @@
-@font-face {
-	font-family: Poppins-Regular;
-	src: url('../../../../fonts/poppins/Poppins-Medium.ttf'); 
-}  
 .header{
 	padding: 20px 0px;
 }
@@ -30,18 +26,6 @@
 }
 .nav__link:hover, .logo:hover{
 	color: #00897b;
-}
-.nav__link:after{
-	content: "";
-	display: block;
-	width: 100%;
-	height: 2px;
-	background-color:  #00897b;
-	position: absolute;
-	opacity: 0;
-
-	transition: opacity 0.1s linear; 
-	z-index: 1;
 }
 .nav__link:hover:after{
 	opacity: 1;
